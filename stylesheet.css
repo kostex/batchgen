@@ -1,0 +1,480 @@
+body,html,button,select {
+	font-family: sans-serif;
+	font-size: 12px;
+}
+
+body {
+	min-width: 850px;
+}
+.ui-datepicker{font-size:12pt;}
+.ui-tooltip { font-size: 8pt;font-family: monospace;}
+
+
+table.db-table     { border-right:1px solid #ccc; border-bottom:1px solid #ccc;}
+table.db-table th  { background:#ddd; padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc;}
+table.db-table td  { padding:5px; border-left:1px solid #ccc; border-top:1px solid #ccc;font-family:monospace;font-size:11px;}
+td.ralign {text-align: right;}
+td.calign {text-align: center;}
+tr.regel:nth-child(3n) {background-color: #eee;}
+
+.totmet {
+	float:left;
+	padding:4px 0px 0 0px;
+	margin:0 4px 0 0;
+}
+
+.new {
+	clear:both;
+	height:4px;
+}
+
+.spacer {
+	float: left;
+	width: 4px;
+	height: 1px;
+}
+.double_spacer {
+	float: left;
+	width: 8px;
+	height: 1px;
+}
+
+
+.lrond {
+	width: 80px;
+	background: #666;
+	color:white;
+	float:left;
+	border:0;
+	border-radius: 6px 0 0 6px;
+	padding: 4px 8px 4px 8px;
+	margin:0px 0px 4px 0px;
+
+}
+
+.lrondf {
+	width: 80px;
+	background: #409240;
+	color:white;
+	float:left;
+	border:0;
+	margin:0px 0px 4px 0px;
+	border-radius: 6px 0 0 6px;
+	padding: 4px 8px 4px 8px;
+}
+
+
+.field_name {
+	width: 80px;
+	background: #666;
+	color:white;
+	float:left;
+	margin:0 0 4px 0;
+	border:0;
+	border-radius: 6px 0 0 6px;
+	padding: 4px 8px 4px 8px;
+    -webkit-user-select: none;
+	user-select: none;	
+}
+
+.rrond {
+ 	background: #ddd;
+	color:black;
+	float:left;
+	border:0;
+	margin:0px 8px 4px 0px;
+	border-radius: 0 6px 6px 0;
+	padding: 4px 8px 4px 8px;
+}
+
+.stanbut { /* standaard button */
+	background: #666;
+	color:white;
+	margin:0 4px 0 0;
+	border:0;
+	border-radius: 6px;
+	padding: 4px 16px 4px 16px;
+/*	-webkit-appearance: none; */
+}
+
+.zoekbut {
+	background: #56b;
+	width: 176px;
+	color:white;
+	margin:0 24px 4px 0;
+	border:0;
+	border-radius: 6px;
+	padding: 4px 8px 4px 8px;
+}
+
+.ufile { /* Upload no file selected */
+	background: #777;
+	color:white;
+	float:left;
+	margin:0 24px 4px 0;
+	border:0;
+	border-radius: 6px;
+	padding: 4px 8px 4px 8px;
+	-webkit-appearance: none;
+}
+
+button:hover {
+    background-color: #44447d;
+    color:white;
+}
+button:active {
+	background: #54548d;
+	color: white;
+}
+
+
+#type_pulldown, #reks_pulldown {
+	float:left;
+	background: #666;
+	color:white;
+	border:0;
+	padding: 4px 12px 4px 4px;
+	margin:0px 0px 4px 0px;
+
+	border-radius: 0 12px 0 0;
+	-webkit-appearance: none;
+}
+#type_pulldown:hover, #reks_pulldown:hover {
+	background: #44447d;
+}
+
+#curdb {
+	padding: 0 0 8px 2px;
+}
+
+#gr_file {
+	width: 600px;
+}
+
+.but4 {
+	background-color: grey;
+	color: white;
+	width: auto;
+	text-align: center;
+	padding: 4px 16px 4px 16px;
+	margin:6px -2px 0px 0px;
+	border-radius: 4px 4px 4px 4px;
+	border:none;
+}
+.but4:hover {
+    background-color: #990000;
+}
+
+input[type="checkbox"],input[type="radio"] {
+	display: none;
+}
+
+input[type="checkbox"].scb {
+	display:block;
+}
+
+input[type="checkbox"] + .filter { /* de filters (zichtbare veldnamen) */
+	text-align: right;
+	width: 90px;
+	float:left;
+	color:white;
+	background: #999;
+	padding: 4px 4px 4px 4px;
+	margin:0px 0px 4px 0px;
+	border-radius: 6px 0 0 6px;
+    -webkit-user-select: none;
+	user-select: none;
+}
+input[type="checkbox"]:checked + .filter {
+	background: #56b;
+}
+input[type="checkbox"] + .option { /* de opties zoals verkort, csv, query.. */
+	text-align: center;
+	float:left;
+	color:white;
+	background: #999;
+	border-radius: 4px;
+	margin:0px 4px 0px 0px;
+	padding: 4px 16px 4px 16px;
+    -webkit-user-select: none;
+	user-select: none;
+}
+input[type="checkbox"]:checked + .option {
+	background: #f93;
+}
+
+input[type="checkbox"] + .option1 { /* Direct handelende opties zoals notitieprint en kenmerkmutatie */
+	text-align: center;
+	float:left;
+	color:white;
+	background: #777;
+	border-radius: 4px;
+	margin:0px 4px 0px 0px;
+	padding: 4px 16px 4px 16px;
+    -webkit-user-select: none;
+	user-select: none;
+}
+
+input[type="checkbox"]:checked + .option1 {
+	background: #378;
+}
+
+input[type="radio"] + label { /* de bijaf en a,d,dv,v,c keuze buttons */
+	text-align: center;
+	float:left;
+	color:white;
+	border-radius: 4px;
+	background: #999;
+	margin: 0px 0px 0px 0px;
+	padding: 4px 12px 4px 12px;
+    -webkit-user-select: none;
+	user-select: none;
+}
+input[type="radio"]:checked + label {
+	background: #f93;
+}
+
+
+input[type="text"] {
+	background: #fff;	
+	float:left;
+	border: 0px;
+	margin:0px 4px 0px 0px;
+	padding: 4px 2px 4px 4px;
+}
+
+input[type="text"].kenedit {
+	background: #378;
+	color:white;
+	border: 0px;
+	padding: 2px;
+	font-family: monospace;
+}
+
+input{
+	font-size:12px;
+}
+
+.dummy { /* voor de Custom pseudo button */
+	text-align: right;
+	width: 90px;
+	float:left;
+	color:white;
+	background: #44447d;
+	padding: 4px 4px 4px 4px;
+	margin:0px 0px 4px 0px;
+	border-radius: 6px 0 0 6px;
+    -webkit-user-select: none;
+	user-select: none;
+}
+
+
+.menu {
+	background: #bbb;
+	padding:8px;
+	margin:0 0 4px 0;
+}
+
+.topbar {
+	margin:8px 4px;
+}
+
+.topsec {
+	float:left;
+}
+.toplogo {
+	float:right;
+}
+
+.topbut {
+	background: #56b;
+	width: 170px;
+	color:white;
+	border:0;
+	border-radius: 6px;
+	padding: 4px 8px 4px 8px;
+	margin: 0px 15px 5px 0px;
+}
+
+.logo {
+	height: 34px;
+}
+.svlogo {
+	height: 102px;
+	position: absolute;
+	top: 15px;
+	left:15px;
+	opacity: 0.1;
+}
+#about {
+	overflow: hidden;
+}
+
+#gr_datumvan {
+	width: 60px;
+}
+#gr_datumtot {
+	width: 60px;
+}
+#gr_typ {
+	width: 24px;
+}
+#gr_tegrek {
+	width: 136px;
+}
+#gr_opdrachtgever {
+	width: 280px;
+}
+#gr_bedrag_operand {
+	width: 20px;
+}
+#gr_bedrag {
+	width: 100px;
+}
+#gr_oms1 {
+	width: 140px;
+}
+#gr_oms2 {
+	width: 140px;
+}
+#gr_oms3 {
+	width: 140px;
+}
+#gr_oms4 {
+	width: 140px;
+}
+#gr_reknr {
+	width: 140px;
+}
+#gr_cus1 {
+	width: 664px;
+}
+#gr_iban {
+	width: 200px;
+}
+#gr_omsc {
+	width: 300px;
+}
+#gr_nam {
+	width: 200px;
+}
+#gr_kenmerk {
+	width: 500px;
+}
+
+.out {
+	padding: 4px;
+	white-space: pre-wrap;
+	height: auto;
+	overflow:auto;
+	font-family: monospace;
+	background-color: #f5f5f5;
+	margin: 0px 0px 4px 0px;
+	border:1px solid black;
+}
+.out1 {
+	width: calc(100% - 4px);
+	margin: 0px 0px 4px 0px;
+	border:1px solid black;
+}
+.tarea {
+	white-space: pre-wrap;
+	overflow:auto;
+	font-family: sans-serif;
+	font-size:large;
+	width: calc(100% - 16px);
+	height: 100px;
+	border:0;
+	padding: 8px;
+}
+#about {
+	text-align: center;
+	font-size: large;
+	line-height: 2em;
+	position: absolute;
+	top: 40px;
+	right: 20px;
+	border:2px solid black;
+	padding: 10px;
+	background: #fff;
+	z-index: 10;
+}
+
+.drag {
+	background: yellow;
+}
+
+#list {
+	white-space: pre-wrap;
+	overflow:auto;
+	font-family: monospace;
+	font-size:medium;
+	border:1px solid black;
+	padding: 8px;
+	resize:both;
+	max-width: 900px;
+	max-height: 450px;
+	height: 250px;
+	width: 500px;
+}
+#template {
+	white-space: pre-wrap;
+	overflow:auto;
+	font-family: monospace;
+	font-size:medium;
+	border:1px solid black;
+	padding: 8px;
+	resize:both;
+	max-width: 900px;
+	max-height: 450px;
+	height: 250px;
+	width: 200px;
+}
+
+
+.veld {
+	display: inline-block;
+	width: auto;
+	background: blue;
+	color:white;
+	border-radius: 3px;
+	padding: 4px;
+	font-family: monospace;
+	font-size: smaller;
+	margin: 2px;
+	-webkit-user-select: none;
+}
+.sqlcommand {
+	display: inline-block;
+	width: auto;
+	background: red;
+	color:white;
+	border-radius: 3px;
+	padding: 4px;
+	font-family: monospace;
+	margin: 2px;
+	-webkit-user-select: none;
+}
+.table {
+	display: inline-block;
+	width: auto;
+	background: yellow;
+	color:black;
+	border-radius: 3px;
+	padding: 4px;
+	font-family: monospace;
+	font-size: smaller;
+	margin: 2px;
+	-webkit-user-select: none;
+}
+
+.keuze {
+	border:1px solid black;
+	padding: 4px;
+	background: #eee;
+	margin: 4px;
+	width: 400px;
+	position: absolute;
+	right:10px;
+	top: 53px;
+}

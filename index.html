@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" media="screen" href="stylesheet.css">
+
+		<script src="jquery-2.2.1.min.js"></script>
+		<script>
+
+			function dragstart(ev){
+				ev.dataTransfer.setData("text/plain", ev.target.getAttribute('content'));
+				ev.dataTransfer.setDragImage(ev.target,-20,-20);
+			}
+			function dragenter(ev){
+				ev.preventDefault;
+			}
+			function drop(ev){
+				var src = ev.dataTransfer.getData("text/plain");
+			}
+
+			function wisLClick(){
+				$("#list").val('');
+			}
+			function wisTClick(){
+				$("#template").val('');
+			}
+
+
+			function zoekClick(){
+					$.post("generate.php",{
+						"list": $("#list").val(),
+						"template": $("#template").val(),
+						"countstart": $("#countstart").val(),
+						"countpad": $("#countpad").val()
+					}, function(data){
+						$("#output").html(data);
+					});
+			}
+
+			
+			function init(){
+
+			}
+
+		</script>
+
+	</head>
+	<body lang="en" onload="init()">
+		<div class='new'></div>
+		<div class="menu">
+			<textarea id="list" ondragenter="dragenter(event)" ondrop="drop(event)"></textarea>
+			<textarea id="template" ondragenter="dragenter(event)" ondrop="drop(event)"></textarea>
+
+			<div class="keuze">
+				<div class="veld" draggable="true" ondragstart="dragstart(event)" content="%f%">FileName</div>
+				<div class="veld" draggable="true" ondragstart="dragstart(event)" content="%fe%">FileName.ext</div>
+				<div class="veld" draggable="true" ondragstart="dragstart(event)" content="%pf%">Path/FileName</div>
+				<div class="veld" draggable="true" ondragstart="dragstart(event)" content="%pfe%">Path/FileName.ext</div>
+				<div class="veld" draggable="true" ondragstart="dragstart(event)" content="%p%">Path</div>
+				<div class="veld" draggable="true" ondragstart="dragstart(event)" content="%c%">Counter</div>
+				<div class="veld" draggable="true" ondragstart="dragstart(event)" content="%cp%">CounterPadding</div>
+			</div>
+			<div class="new"></div>
+	 </div>	
+	 <div class="menu">
+	 	<button class="stanbut" onclick="wisLClick()">Clear File Window</button>
+	 	<button class="stanbut" onclick="wisTClick()">Clear Template Window</button>
+	 	CounterStartValue:<input id="countstart" type="number" value="0" min="0"/>
+	 	Total Length:<input id="countpad" type="number" value="2" min="0" max="10"/>
+	 	<button class="zoekbut" onclick="zoekClick()">GENERATE</button>
+
+	 </div>
+	 <div id="output">
+	 </div>
+	</body>
+</html>
